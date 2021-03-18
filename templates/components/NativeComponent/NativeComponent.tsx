@@ -32,4 +32,4 @@ NativeComponent.propTypes = {
 
 NativeComponent.displayName = nameof(NativeComponent);
 
-export default React.memo(NativeComponent);
+export default NativeComponent;

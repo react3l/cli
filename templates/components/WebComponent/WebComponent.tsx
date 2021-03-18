@@ -32,4 +32,4 @@ WebComponent.propTypes = {
 
 WebComponent.displayName = nameof(WebComponent);
 
-export default React.memo(WebComponent);
+export default WebComponent;
