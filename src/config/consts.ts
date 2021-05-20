@@ -1,9 +1,9 @@
-import { name, version } from 'package.json';
+import {name, version} from 'package.json';
 
 export enum NodeENV {
   development = 'development',
   production = 'production',
-};
+}
 
 export const NODE_ENV: NodeENV = process.env.NODE_ENV as NodeENV;
 

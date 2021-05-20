@@ -1,4 +1,4 @@
-import { TemplateNames } from 'core/TemplateNames';
+import type {TemplateNames} from 'core/TemplateNames';
 import kebabCase from 'lodash/kebabCase';
 import camelCase from 'lodash/camelCase';
 import snakeCase from 'lodash/snakeCase';

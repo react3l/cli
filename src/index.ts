@@ -1,4 +1,4 @@
-import { Command } from 'core/Command';
+import {Command} from 'core/Command';
 
 const command: Command = new Command();
 

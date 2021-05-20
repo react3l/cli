@@ -1,5 +1,5 @@
-import { execSync } from 'child_process';
-import { GitCredentials } from 'core/GitCredentials';
+import {execSync} from 'child_process';
+import type {GitCredentials} from 'core/GitCredentials';
 
 export function getGitCredentials(): GitCredentials {
   const name: string = execSync('git config user.name', {

@@ -1,4 +1,4 @@
-import { DATE_TIME_FORMAT } from 'config/consts';
+import {DATE_TIME_FORMAT} from 'config/consts';
 import moment from 'moment';
 
 export function getCurrentTimeString(): string {

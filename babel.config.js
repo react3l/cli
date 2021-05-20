@@ -5,6 +5,5 @@ module.exports = {
   ],
   plugins: [
     'macros',
-    '@babel/plugin-proposal-class-properties',
   ],
 };

@@ -1,5 +1,5 @@
-import { TemplateNames } from 'core/TemplateNames';
-import { composeNames } from 'helpers/naming';
+import type {TemplateNames} from 'core/TemplateNames';
+import {composeNames} from 'helpers/naming';
 
 test('name', () => {
   const testName: string = 'TestName';

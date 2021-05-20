@@ -1,5 +1,5 @@
-import { GitCredentials } from 'core/GitCredentials';
-import { getGitCredentials } from 'helpers/git';
+import type {GitCredentials} from 'core/GitCredentials';
+import {getGitCredentials} from 'helpers/git';
 
 test('git credentials', () => {
   const credentials: GitCredentials = getGitCredentials();

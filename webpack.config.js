@@ -1,5 +1,6 @@
 const path = require('path');
-const SourceMapSupport = require('webpack-source-map-support');
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
@@ -27,13 +28,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [
-      '.js',
-      '.jsx',
-      '.ts',
-      '.tsx',
-      '.node',
-    ],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.node'],
     modules: [
       path.resolve(__dirname, 'node_modules'),
       path.resolve(__dirname, 'src'),
@@ -43,8 +38,19 @@ module.exports = {
     },
   },
   target: 'node',
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV === 'development' && 'source-map',
   plugins: [
-    new SourceMapSupport(),
+    new webpack.BannerPlugin({banner: '#!/usr/bin/env node', raw: true}),
   ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          output: {
+            comments: false,
+          },
+        },
+      }),
+    ],
+  },
 };
